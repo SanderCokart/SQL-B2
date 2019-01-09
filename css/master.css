@@ -5,8 +5,45 @@ table{
 
 th{
     border-bottom: 3px solid #000;
+    text-align: left;
 }
 
 td{
     border-bottom: 2px solid #666;
+    text-align: left;
+}
+
+h1{
+    font-size: 40px;
+    font-family: arial;
+    text-transform: uppercase;
+}
+
+input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #FFC;
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 20pt;
+}
+
+
+
+button[type=submit] {
+    width: 25%;
+    font-size: 36pt;
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: lightgreen;
+    border-radius: 5px;
+    border: 5px black solid;
+}
+
+
+button:hover{
+    font-size: 40pt;
 }
