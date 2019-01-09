@@ -10,16 +10,27 @@
         <title>opdr1</title>
     </head>
     <body>
-        <center><h1>Songs</h1>
 
+        <center><form action="includes/submit.inc.php" method="POST">
+            <input type="text" name="songName"placeholder="Song Name">
+            <br>
+            <input type="text" name="artistName"placeholder="Artist Name">
+            <br>
+            <button type="submit" name="submit">Send</button>
+        </form></center>
+
+        <center><h1>Song List</h1>
+        <!-- database listings -->
         <?php
               $sqlget = "SELECT * FROM songs;";
               $sqldata = mysqli_query($conn, $sqlget) or die('error getting the data');
 
-                      echo "<table width=200px>";
+                    // CREATES A TABLE
+                      echo "<table width=25%>";
                       echo "<tr><th>ID</th><th>Title</th><th>Artist</th>";
 
-                      while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+                      // STARTS A LOOP THAT RUNS FOR AS LONG AS THERE IS DATA AND SPITS OUT DATABASE DATA
+                      while($row = mysqli_fetch_assoc($sqldata)){
                           echo "<tr><td>";
                           echo $row['ID'];
                           echo "</td><td>";
