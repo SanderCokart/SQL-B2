@@ -1,0 +1,27 @@
+UPDATE songs
+SET Artist = 'testartist', Title = 'testtitle'
+WHERE ID = 1;
+-----------------------------------------
+UPDATE songs
+SET Artist = 'Drivvin', Title = 'Airless'
+WHERE ID = 3;
+-----------------------------------------
+SELECT * FROM `songs`
+-----------------------------------------
+SELECT *
+FROM songs
+WHERE Artist = "Dua Lipa"
+-----------------------------------------
+SELECT * FROM `songs` WHERE RAND()
+LIMIT 1
+-----------------------------------------
+the easiest way to select a song is to select a
+specific ID But selecting something random is more fun
+-----------------------------------------
+DELETE FROM `songs` WHERE Artist = "Dua Lipa"
+LIMIT 2
+-----------------------------------------
+
+-----------------------------------------
+
+-----------------------------------------
