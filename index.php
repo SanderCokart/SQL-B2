@@ -9,17 +9,42 @@
         <link rel="stylesheet" href="css/master.css">
         <title>opdr1</title>
     </head>
-    <body>
-
-        <center><form action="includes/submit.inc.php" method="POST">
+    <body><center>
+<div id="forms">
+    <div id="insert">
+        <form action="includes/submit.inc.php" method="POST">
             <input type="text" name="songName"placeholder="Song Name">
             <br>
             <input type="text" name="artistName"placeholder="Artist Name">
             <br>
-            <button type="submit" name="submit">Send</button>
-        </form></center>
+            <button type="submit" name="submit">INSERT</button>
+        </form>
+    </div>
+    <div id="edit">
+        <form action="includes/edit.inc.php" method="POST">
+            <input type="text" name="id"placeholder="ID">
+            <br>
+            <input type="text" name="songName"placeholder="Song Name">
+            <br>
+            <input type="text" name="artistName"placeholder="Artist Name">
+            <br>
+            <button type="submit" name="submit">EDIT</button>
+        </form>
+    </div>
 
-        <center><h1>Song List</h1>
+            <!-- FORM TO DELETE -->
+    <div id="remove">
+        <form action="includes/remove.inc.php" method="POST">
+            <input type="number" name="id" placeholder="ID">
+            <br>
+            <button type="submit" name="submit">REMOVE</button>
+        </form>
+    </div>
+</div>
+            <br><br>
+
+            <h1>Song List</h1>
+
         <!-- database listings -->
         <?php
               $sqlget = "SELECT * FROM songs;";
@@ -30,9 +55,12 @@
                       echo "<tr><th>ID</th><th>Title</th><th>Artist</th>";
 
                       // STARTS A LOOP THAT RUNS FOR AS LONG AS THERE IS DATA AND SPITS OUT DATABASE DATA
+                      $counter = 0;
                       while($row = mysqli_fetch_assoc($sqldata)){
+                          $id[$counter++] = $row['ID'];
+
                           echo "<tr><td>";
-                          echo $row['ID'];
+                          echo $row['ID']."<br>";
                           echo "</td><td>";
                           echo $row['Title'];
                           echo "</td><td>";
