@@ -55,9 +55,7 @@
                       echo "<tr><th>ID</th><th>Title</th><th>Artist</th>";
 
                       // STARTS A LOOP THAT RUNS FOR AS LONG AS THERE IS DATA AND SPITS OUT DATABASE DATA
-                      $counter = 0;
                       while($row = mysqli_fetch_assoc($sqldata)){
-                          $id[$counter++] = $row['ID'];
 
                           echo "<tr><td>";
                           echo $row['ID']."<br>";
@@ -67,7 +65,11 @@
                           echo $row['Artist'];
                           echo "</td></tr>";
                       }
-          ?>
+
+                      echo "</table><br><br>";
+        ?>
+
+        <h1><a href="verlanglijst.php">verlanglijst</h1>
 
     </body>
 </html>
