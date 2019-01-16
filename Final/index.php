@@ -11,11 +11,11 @@ include_once "includes/functions.php";
          <title>verjaardagen</title>
      </head>
      <body>
-         <h1>Birthdays</h1>
+         <h1 class="header">Birthdays</h1>
 
          <?php
          echo
-        "<table width=50% border=\"solid\">;
+        "<table>
         <tr>
         <th>ID</th>
         <th>First Name</th>
@@ -23,7 +23,6 @@ include_once "includes/functions.php";
         <th>Birthday</th>
         <th>Age</th>
         <th>Your Time Here</th>";
-
 
         $sqlget = "SELECT * FROM verjaardagen;";
         $sqldata = mysqli_query($conn, $sqlget) or die('error getting the data');
@@ -39,7 +38,7 @@ include_once "includes/functions.php";
               echo $row['birthDay'];
 
               $age = getAge($row['birthDay']);
-              $time = getTime();
+              $time = getTime($row['birthDay']);
 
               echo "</td><td>";
               echo "$age";
@@ -47,7 +46,43 @@ include_once "includes/functions.php";
               echo "$time";
               echo "</td></tr>";
           }
+          echo "</table>";
+
+
           ?>
+      <div class="operationContainer">
+        <div  class="insert">
+        <h1 class="operations">INSERT</h1>
+            <form class="insertForm" action="includes/insert.inc.php" method="POST">
+                <input type="text" name="firstName" placeholder="First Name">
+
+                <input type="text" name="lastName" placeholder="Last Name">
+
+                <input type="date" name="birthDay" placeholder="Birthday">
+                <input class="submit" type="submit" name="submit">
+            </form>
+        </div>
+        <div  class = "edit">
+        <h1 class="operations">EDIT</h1>
+            <form class="editForm" action="includes/edit.inc.php" method="POST">
+                <input type="number" name="ID" placeholder="ID">
+
+                <input type="text" name="firstName" placeholder="First Name">
+
+                <input type="text" name="lastName" placeholder="Last Name">
+
+                <input type="date" name="birthDay" placeholder="Birthday">
+                <input class="submit" type="submit" name="submit">
+            </form>
+        </div>
+        <div  class = "remove">
+        <h1 class="operations">REMOVE</h1>
+            <form class="removeForm" action="includes/remove.inc.php" method="POST">
+                <input type="number" name="ID" placeholder="ID">
+                <input class="submit" type="submit" name="submit">
+            </form>
+        </div>
+    </div>
 
 
      </body>
