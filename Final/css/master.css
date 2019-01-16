@@ -1,0 +1,106 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+}
+
+h1.header{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36pt;
+    font-family: arial;
+}
+
+/* data */
+
+table{
+    display: table;
+    background-color: rgb(0, 200, 200);
+    width: 100%;
+    padding: 2%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-spacing:5px;
+}
+
+th{
+    font-size: 16pt;
+    font-family: arial;
+    text-align: center;
+    border-bottom: black 2px solid;
+}
+
+td{
+    border-bottom: black 2px dashed;
+    font-size: 16pt;
+    font-family: arial;
+    text-align: center;
+
+}
+
+
+/* operationContainer */
+h1.operations{
+    font-size: 20pt;
+    font-family: arial;
+    color: white;
+    text-align: center;
+}
+
+div.operationContainer{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgb(192, 0, 0);
+    display: table;
+    padding: 2%;
+}
+
+div.insert{
+    width: 10%;
+    padding: 0.5%;
+    display: table-cell;
+}
+div.edit{
+    width: 10%;
+    padding: 0.5%;
+    display: table-cell;
+}
+div.remove{
+    width: 10%;
+    padding: 0.5%;
+    display: table-cell;
+}
+
+
+
+div.insertForm{
+    display: inline-block;
+}
+div.editForm{
+    display: inline-block;
+}
+div.removeForm{
+    display: inline-block;
+}
+
+input{
+    width: 100%;
+    border-radius: 25px;
+    height: 20pt;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
+    font-size: 16pt;
+    text-indent: 10pt;
+    outline: none;
+    margin-top: 25px;
+}
+
+input.submit{
+    width: 100%;
+    background-color: rgb(0, 255, 0);
+}
+
+::placeholder{
+    font-size: 16pt;
+    margin-left: 20px;
+}
