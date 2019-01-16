@@ -13,6 +13,11 @@ function getAge($userDob){
     return $age;
 }
 
-function getTime() {
-    
+function getTime($userDob) {
+    $dob = new DateTime($userDob);
+    $now = new DateTime();
+    $difference = $dob->diff($now);
+
+
+    return $difference->y." Years<br>".$difference->m." Months<br>".$difference->d." Days";
 }
