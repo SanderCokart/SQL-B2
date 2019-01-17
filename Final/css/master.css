@@ -11,8 +11,8 @@ h1.header{
     font-family: arial;
 }
 
-/* data */
 
+/* DATABASE */
 table{
     display: table;
     background-color: rgb(0, 200, 200);
@@ -30,6 +30,7 @@ th{
     border-bottom: black 2px solid;
 }
 
+
 td{
     border-bottom: black 2px dashed;
     font-size: 16pt;
@@ -37,7 +38,6 @@ td{
     text-align: center;
 
 }
-
 
 /* operationContainer */
 h1.operations{
@@ -104,3 +104,4 @@ input.submit{
     font-size: 16pt;
     margin-left: 20px;
 }
+/* END OF CODE */
