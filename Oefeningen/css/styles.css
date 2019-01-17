@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#container {
+	display: block;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: red;
+}
+
+.tekst {
+	font-weight: bold;
+	font-size: 2.5vw;
+	text-align: center;
+	margin: 1%;
+}
+
+.blok {
+	display: block;
+	float: left;
+	height: 40%;
+	width: 96%;
+	background-color: blue;
+	margin: 2%;
+}
+
+.bloktekst {
+	display: block;
+	float: left;
+	height: 50%;
+	width: 68%;
+	margin: 1%;
+	background-color: green;
+}
+
+.blokimage {
+	display: block;
+	float: left;
+	height: 50%;
+	width: 28%;
+	margin: 1% 1% 1% 0;
+	background-color: yellow;
+}
