@@ -17,8 +17,9 @@ include_once "includes/functions.php";
 
          <?php
          // CREATES the table headers
-         echo
-        "<table>
+         echo"
+         <div class=\"data\">
+        <table>
         <tr>
         <th>ID</th>
         <th>First Name</th>
@@ -53,8 +54,8 @@ include_once "includes/functions.php";
           }
           echo "</table>";
           // END of table
-
           ?>
+      </div>
 
           <!-- STARTS the area to be used for the functions to edit the table -->
       <div class="operationContainer">

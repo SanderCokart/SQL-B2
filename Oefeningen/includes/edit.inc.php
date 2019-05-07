@@ -12,4 +12,5 @@ WHERE ID = '$id';";
 if (isset($id,$artistName,$songName)) {
     mysqli_query($conn, $sql);
 }
+$conn->close();
 header("Location: ../index.php?submit=succes");

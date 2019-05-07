@@ -13,6 +13,12 @@ h1.header{
 
 
 /* DATABASE */
+div.data{
+    overflow: scroll;
+    max-height: 500pt;
+    overflow-x: hidden;
+}
+
 table{
     display: table;
     background-color: rgb(0, 200, 200);

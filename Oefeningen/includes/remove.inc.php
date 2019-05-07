@@ -8,5 +8,5 @@ if (isset($id)) {
     mysqli_query($conn, $sql);
     }
 
-    header("Location: ../index.php?submit=succes");
     $conn->close();
+    header("Location: ../index.php?submit=succes");

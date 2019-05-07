@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2018 at 10:39 PM
+-- Generation Time: Jan 20, 2019 at 03:01 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,32 +25,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `songs`
+-- Table structure for table `verjaardagen`
 --
 
-CREATE TABLE `songs` (
+CREATE TABLE `verjaardagen` (
   `ID` int(11) NOT NULL,
-  `Artist` text NOT NULL,
-  `Title` text NOT NULL
+  `firstName` text NOT NULL,
+  `lastName` text NOT NULL,
+  `birthDay` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `songs`
+-- Dumping data for table `verjaardagen`
 --
 
-INSERT INTO `songs` (`ID`, `Artist`, `Title`) VALUES
-(1, 'testartist', 'testtitle'),
-(2, 'Allan Rayman', 'Sweetheart'),
-(3, 'Drivvin', 'Airless');
+INSERT INTO `verjaardagen` (`ID`, `firstName`, `lastName`, `birthDay`) VALUES
+(1, 'Sander', 'Cokart', '1998-04-25'),
+(6, 'Hubs', 'Bunny', '2018-04-25'),
+(8, 'Souraya', 'Hilm', '1998-05-02'),
+(9, 'Heba', 'Abaas', '1996-03-02'),
+(11, 'Our', 'Hubs', '2017-09-27'),
+(12, 'Falco', 'van der Ver', '1998-09-12');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `songs`
+-- Indexes for table `verjaardagen`
 --
-ALTER TABLE `songs`
+ALTER TABLE `verjaardagen`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -58,10 +62,10 @@ ALTER TABLE `songs`
 --
 
 --
--- AUTO_INCREMENT for table `songs`
+-- AUTO_INCREMENT for table `verjaardagen`
 --
-ALTER TABLE `songs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `verjaardagen`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,46 +4,99 @@ html {
 
 body {
 	height: 100%;
+	width: auto;
 }
 
 #container {
 	display: block;
-	width: 80%;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
-	background-color: red;
 }
 
-.tekst {
-	font-weight: bold;
-	font-size: 2.5vw;
-	text-align: center;
-	margin: 1%;
+.productName{
+	font-size: 16pt;
+	font-family: arial;
+	margin-left: 1.5%;
+	color: white;
+	text-transform: uppercase;
+	margin-right: 30%;
 }
+
+a{
+	text-decoration: none;
+}
+
+
+p{
+	font-size: 16pt;
+	font-family: arial;
+	padding: 10pt;
+	overflow: hidden;
+	height: inherit;
+	color: black;
+	margin: auto;
+}
+
 
 .blok {
 	display: block;
-	float: left;
-	height: 40%;
-	width: 96%;
-	background-color: blue;
+	background-color: rgba(192,0,0,0.85);
+	height: auto;
+	max-height: 100%;
+	border-radius: 20pt;
 	margin: 2%;
+	padding: 1.5%;
+	overflow-y: hidden;
 }
 
 .bloktekst {
 	display: block;
 	float: left;
-	height: 50%;
-	width: 68%;
-	margin: 1%;
-	background-color: green;
+	height: auto;
+	width: auto;
+	max-width: 65%;
+	margin-left: 1%;
+	background-color: rgb(255, 255, 255);
+	padding-left: 0.8%;
+	border-radius: 20pt;
 }
 
 .blokimage {
 	display: block;
+	max-width: 25%;
+	background-color: white;
+	border-radius: 20pt;
+	float: right;
+	max-width: 25%;
+	padding: 20pt;
+	width: auto;
+	height: auto;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	margin: auto;
+
+}
+
+.price{
+	background-color: green;
+	border-radius: 20pt;
+	width: 100%;
 	float: left;
-	height: 50%;
-	width: 28%;
-	margin: 1% 1% 1% 0;
-	background-color: yellow;
+	margin: 0;
+	height: auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+.h2price{
+	font-size: 20pt;
+	font-family: arial black;
+	text-align: center;
+	color: white;
+	margin: 0;
+	padding: 0;
 }
